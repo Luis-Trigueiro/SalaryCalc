@@ -1,2 +1,2 @@
 # SalaryCalc
- Salary calculator. Native Android.
+ Salary calculator. Native Android.Android Studio.
