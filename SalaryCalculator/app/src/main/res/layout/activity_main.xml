@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C7DBE4"
     android:foregroundTint="#FFFFFF"
     android:touchscreenBlocksFocus="false">
 
@@ -98,8 +99,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="89dp"
-        android:textStyle="bold"
-        android:text="Calculadora de Salário Líquido" />
+        android:text="Calculadora de Salário Líquido"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button3"
