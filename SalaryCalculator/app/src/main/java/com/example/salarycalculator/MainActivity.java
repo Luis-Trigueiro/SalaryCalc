@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     EditText n1, n2, n3;
     double salBruto, dependent, otherdisc;
-    double inss, irrf, saliq;
+    double inss, irrf, saliq, disc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         calculateInss();
         calculateIrrf();
         salLiq();
+        discount();
         nextPage();
     }
 
@@ -80,7 +81,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void salLiq() {
+
         saliq = salBruto - inss - irrf - otherdisc;
+    }
+
+    public void discount() {
+        disc = (1 - saliq / salBruto) * 100;
     }
 
     public void nextPage() {
@@ -90,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         messageIntent.putExtra("od", otherdisc);
         messageIntent.putExtra("salliq", saliq);
         messageIntent.putExtra("salb", salBruto);
+        messageIntent.putExtra("disc", disc);
         startActivity(messageIntent);
     }
 }

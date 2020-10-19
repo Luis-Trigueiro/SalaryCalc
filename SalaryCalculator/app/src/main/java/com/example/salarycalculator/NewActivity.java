@@ -18,15 +18,14 @@ public class NewActivity extends AppCompatActivity {
 
     public void result() {
         Intent intent = getIntent();
-        Intent intent2 = getIntent();
-        Intent intent3 = getIntent();
-        Intent intent4 = getIntent();
-        Intent intent5 = getIntent();
+
         double inss = (double) intent.getSerializableExtra("inss");
-        double irrf = (double) intent2.getSerializableExtra("irrf");
-        double od = (double) intent3.getSerializableExtra("od");
-        double salliq = (double) intent4.getSerializableExtra("salliq");
-        double salb = (double) intent5.getSerializableExtra("salb");
+        double irrf = (double) intent.getSerializableExtra("irrf");
+        double od = (double) intent.getSerializableExtra("od");
+        double salliq = (double) intent.getSerializableExtra("salliq");
+        double salb = (double) intent.getSerializableExtra("salb");
+        double disc = (double) intent.getSerializableExtra("disc");
+
         TextView resinss = (TextView) findViewById(R.id.inss);
         resinss.setText(String.valueOf(inss));
         TextView resirrf = (TextView) findViewById(R.id.irrf);
@@ -37,6 +36,8 @@ public class NewActivity extends AppCompatActivity {
         resliq.setText(String.valueOf(salliq));
         TextView resbrut = (TextView) findViewById(R.id.sal);
         resbrut.setText(String.valueOf(salb));
+        TextView resdisc = (TextView) findViewById(R.id.disc);
+        resdisc.setText(String.valueOf(disc));
     }
 
     public void mainActivity(View view) {
