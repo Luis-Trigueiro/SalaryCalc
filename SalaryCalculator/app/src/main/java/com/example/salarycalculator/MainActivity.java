@@ -86,7 +86,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void discount() {
-        disc = (1 - saliq / salBruto) * 100;
+
+        if (salBruto == 0) {
+            disc = 0;
+        } else
+            disc = (1 - saliq / salBruto) * 100;
     }
 
     public void nextPage() {

@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF"
+    android:touchscreenBlocksFocus="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,6 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="89dp"
+        android:textStyle="bold"
         android:text="Calculadora de Salário Líquido" />
 
     <Button
